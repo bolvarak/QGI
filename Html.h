@@ -290,6 +290,168 @@ namespace QGI
 			/////////////////////////////////////////////////////////////////
 
 			/**
+			 * @paragraph This constant defines the text for the alt attribute name
+			 * @brief QGI::Html::AttributeAlternate
+			 * @var QString
+			 */
+			static QString AttributeAlternate;
+
+			/**
+			 * @paragraph This constant defines the text for the charset attribute name
+			 * @brief QGI::Html::AttributeCharset
+			 * @var QString
+			 */
+			static QString AttributeCharset;
+
+			/**
+			 * @paragraph This constant defines the text for the class attribute name
+			 * @brief QGI::Html::AttributeClass
+			 * @var QString
+			 */
+			static QString AttributeClass;
+
+			/**
+			 * @paragraph This constant defines the text for the content attribute name
+			 * @brief QGI::Html::AttributeContent
+			 * @var QString
+			 */
+			static QString AttributeContent;
+
+			/**
+			 * @paragraph This constant defines the text for the description attribute name
+			 * @brief QGI::Html::AttributeDescription
+			 * @var QString
+			 */
+			static QString AttributeDescription;
+
+
+			/**
+			 * @paragraph This constant defines the text for the height attribute name
+			 * @brief QGI::Html::AttributeHeight
+			 * @var QString
+			 */
+			static QString AttributeHeight;
+
+			/**
+			 * @paragraph This constant defines the text for the href attribute name
+			 * @brief QGI::Html::AttributeHypertextReference
+			 * @var QString
+			 */
+			static QString AttributeHypertextReference;
+
+			/**
+			 * @paragraph This constant defines the text for the http-equiv attribute name
+			 * @brief QGI::Html::AttributeHttpEquivalent
+			 * @var QString
+			 */
+			static QString AttributeHttpEquivalent;
+
+			/**
+			 * @paragraph This constant defines the text for the id attribute name
+			 * @brief QGI::Html::AttributeIdentifier
+			 * @var QString
+			 */
+			static QString AttributeIdentifier;
+
+			/**
+			 * @paragraph This constant defines the text for the maxlength attribute name
+			 * @brief QGI::Html::AttributeMaximumLength
+			 * @var QString
+			 */
+			static QString AttributeMaximumLength;
+
+			/**
+			 * @paragraph This constant defines the text for the media attribute name
+			 * @brief QGI::Html::AttributeMedia
+			 * @var QString
+			 */
+			static QString AttributeMedia;
+
+			/**
+			 * @paragraph This constant defines the text for the name attribute name
+			 * @brief QGI::Html::AttributeName
+			 * @var QString
+			 */
+			static QString AttributeName;
+
+			/**
+			 * @paragraph This constant defines the text for the placeholder attribute name
+			 * @brief QGI::Html::AttributePlaceholder
+			 * @var QString
+			 */
+			static QString AttributePlaceholder;
+
+			/**
+			 * @paragraph This constant defines the text for the prefix attribute name
+			 * @brief QGI::Html::AttributePrefix
+			 * @var QString
+			 */
+			static QString AttributePrefix;
+
+			/**
+			 * @paragraph This constant defines the text for the property attribute name
+			 * @brief QGI::Html::AttributeProperty
+			 * @var QString
+			 */
+			static QString AttributeProperty;
+
+			/**
+			 * @paragraph This constant defines the text for the rel attribute name
+			 * @brief QGI::Html::AttributeRelativity
+			 * @var QString
+			 */
+			static QString AttributeRelativity;
+
+			/**
+			 * @paragraph This constant defines the text for the size attribute name
+			 * @brief QGI::Html::AttributeSize
+			 * @var QString
+			 */
+			static QString AttributeSize;
+
+			/**
+			 * @paragraph This constant defines the text for the sizes attribute name
+			 * @brief QGI::Html::AttributeSizes
+			 * @var QString
+			 */
+			static QString AttributeSizes;
+
+			/**
+			 * @paragraph This constant defines the text for the src attribute name
+			 * @brief QGI::Html::AttributeSource
+			 * @var QString
+			 */
+			static QString AttributeSource;
+
+			/**
+			 * @paragraph This constant defines the text for the style attribute name
+			 * @brief QGI::Html::AttributeStyle
+			 * @var QString
+			 */
+			static QString AttributeStyle;
+
+			/**
+			 * @paragraph This constant defines the text for the title attribute name
+			 * @brief QGI::Html::AttributeTitle
+			 * @var QString
+			 */
+			static QString AttributeTitle;
+
+			/**
+			 * @paragraph This constant defines the text for the type attribute name
+			 * @brief QGI::Html::AttributeType
+			 * @var QString
+			 */
+			static QString AttributeType;
+
+			/**
+			 * @paragraph This constant defines the text for the width attribute name
+			 * @brief QGI::Html::AttributeWidth
+			 * @var QString
+			 */
+			static QString AttributeWidth;
+
+			/**
 			 * @paragraph This constant defines the text for the type attribute for the button input
 			 * @brief QGI::Html::InputButton
 			 * @var QString
@@ -358,6 +520,34 @@ namespace QGI
 			 * @var QString
 			 */
 			static QString InputText;
+
+			/**
+			 * @paragraph This constant defines the text for the disabled property name
+			 * @brief QGI::Html::PropertyDisabled
+			 * @var QString
+			 */
+			static QString PropertyDisabled;
+
+			/**
+			 * @paragraph This constant defines the text for the readonly property name
+			 * @brief QGI::Html::PropertyReadOnly
+			 * @var QString
+			 */
+			static QString PropertyReadOnly;
+
+			/**
+			 * @paragraph This constant defines the text for the required property name
+			 * @brief QGI::Html::PropertyRequired
+			 * @var QString
+			 */
+			static QString PropertyRequired;
+
+			/**
+			 * @paragraph This constant defines the text for the selected property name
+			 * @brief QGI::Html::PropertySelected
+			 * @var QString
+			 */
+			static QString PropertySelected;
 
 			/**
 			 * @paragraph This constant defines the text for the a tag
