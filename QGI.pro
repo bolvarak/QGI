@@ -5,8 +5,10 @@ CONFIG   += console
 CONFIG   -= app_bundle
 TEMPLATE  = app
 SOURCES  += main.cpp \
-    Html.cpp
+    Html.cpp \
+    Cgi.cpp
 
 HEADERS += \
     QGI \
-    Html.h
+    Html.h \
+    Cgi.h

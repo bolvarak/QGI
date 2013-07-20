@@ -286,6 +286,169 @@ namespace QGI
 		public:
 
 			///////////////////////////////////////////////////////////////////
+			/// Constants ////////////////////////////////////////////////////
+			/////////////////////////////////////////////////////////////////
+
+
+			static QString InputButton;
+
+
+			static QString InputCheckbox;
+
+
+			static QString InputFile;
+
+
+			static QString InputHidden;
+
+
+			static QString InputImage;
+
+
+			static QString InputPassword;
+
+
+			static QString InputRadio;
+
+
+			static QString InputReset;
+
+
+			static QString InputSubmit;
+
+
+			static QString InputText;
+
+
+			static QString TagAnchor;
+
+
+			static QString TagBody;
+
+
+			static QString TagBold;
+
+
+			static QString TagButton;
+
+
+			static QString TagCaption;
+
+
+			static QString TagDefinitionDescription;
+
+
+			static QString TagDefinitionList;
+
+
+			static QString TagDefinitionTerm;
+
+
+			static QString TagDivider;
+
+
+			static QString TagFieldset;
+
+
+			static QString TagForm;
+
+
+			static QString TagHead;
+
+
+			static QString TagHeader1;
+
+
+			static QString TagHeader2;
+
+
+			static QString TagHeader3;
+
+
+			static QString TagHeader4;
+
+
+			static QString TagHeader5;
+
+
+			static QString TagHtml;
+
+
+			static QString TagInput;
+
+
+			static QString TagItalics;
+
+
+			static QString TagLabel;
+
+
+			static QString TagLegend;
+
+
+			static QString TagLink;
+
+
+			static QString TagListItem;
+
+
+			static QString TagMeta;
+
+
+			static QString TagOrderedList;
+
+
+			static QString TagParagraph;
+
+
+			static QString TagScript;
+
+
+			static QString TagSelect;
+
+
+			static QString TagSpan;
+
+
+			static QString TagStrong;
+
+
+			static QString TagStyle;
+
+
+			static QString TagTable;
+
+
+			static QString TableBody;
+
+
+			static QString TagTableData;
+
+
+			static QString TagTableDataHeader;
+
+
+			static QString TableFooter;
+
+
+			static QString TagTableHeader;
+
+
+			static QString TagTableRow;
+
+
+			static QString TagTextarea;
+
+
+			static QString TagTitle;
+
+
+			static QString TagUnderline;
+
+
+			static QString TagUnorderedList;
+
+			///////////////////////////////////////////////////////////////////
 			/// Properties ///////////////////////////////////////////////////
 			/////////////////////////////////////////////////////////////////
 
