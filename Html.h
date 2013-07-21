@@ -25,6 +25,94 @@ namespace QGI
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	/**
+	 * @paragraph This structure generates the options for a select tag
+	 * @brief QGI::DataProvider()
+	 */
+	struct DataProvider {
+
+			///////////////////////////////////////////////////////////////////
+			/// Properties ///////////////////////////////////////////////////
+			/////////////////////////////////////////////////////////////////
+
+			/**
+			 * @paragraph This property contains the label/value option pairs
+			 * @brief QGI::DataProvider::mDataPairs
+			 * @var QMap<QString, QString>
+			 */
+			QMap<QString, QString> mDataPairs;
+
+			/**
+			 * @paragraph This property contains the selected option value
+			 * @brief QGI::DataProvider::mSelectedValue
+			 * @var QString
+			 */
+			QString mSelectedValue;
+
+			///////////////////////////////////////////////////////////////////
+			/// Construct ////////////////////////////////////////////////////
+			/////////////////////////////////////////////////////////////////
+
+			/**
+			 * @paragraph This constructor simply sets up the structure
+			 * @brief QGI::DataProvider::DataProvider()
+			 */
+			DataProvider()
+			{}
+
+			///////////////////////////////////////////////////////////////////
+			/// Methods //////////////////////////////////////////////////////
+			/////////////////////////////////////////////////////////////////
+
+			/**
+			 * @paragraph This method adds an option to the structure instane
+			 * @brief QGI::DataProvider::addOption()
+			 * @param QString strLabel
+			 * @return void
+			 */
+			void addOption(QString strValue, QString strLabel)
+			{
+				// Add the option to the structure instance
+				this->mDataPairs.insert(strLabel, strValue);
+			}
+
+			/**
+			 * @paragraph This method generates the option elements for this data provider
+			 * @brief QGI::DataProvider::toString()
+			 * @return QString
+			 */
+			QString toString()
+			{
+				// Define the return string
+				QString strDataProvider;
+				// Create the attributes iterator
+				QMap<QString, QString>::iterator itrOptions;
+				// Loop through the attributes
+				for (itrOptions = this->mDataPairs.begin(); itrOptions != this->mDataPairs.end(); ++itrOptions) {
+					// Add the option to the data provider
+					strDataProvider.append(QString("<option value=\"%1\">%2</option>").arg(itrOptions.value(), itrOptions.key()));
+				}
+				// Return the data provider
+				return strDataProvider;
+			}
+
+			///////////////////////////////////////////////////////////////////
+			/// Setters //////////////////////////////////////////////////////
+			/////////////////////////////////////////////////////////////////
+
+			/**
+			 * @paragraph This method sets the selected value for this data provider
+			 * @brief QGI::DataProvider::setSelectedValue()
+			 * @param QString strValue
+			 * @return void
+			 */
+			void setSelectedValue(QString strValue)
+			{
+				// Set the selected value into the structure instance
+				this->mSelectedValue = strValue;
+			}
+	};
+
+	/**
 	 * @paragraph This is the base element structure
 	 * @brief QGI::Element()
 	 */
@@ -68,30 +156,26 @@ namespace QGI
 			 * @brief QGI::Element::addAttribute()
 			 * @param QString strName
 			 * @param QString strValue
-			 * @return QGI::Element*
+			 * @return void
 			 */
-			Element* addAttribute(QString strName, QString strValue)
+			void addAttribute(QString strName, QString strValue)
 			{
 				// Add the attribute into the structure instance
 				this->mAttributes.insert(strName, strValue);
-				// Return the structure instance
-				return this;
 			}
 
 			/**
 			 * @paragraph This method adds a property to the structure
 			 * @brief QGI::Element::addProperty()
 			 * @param QString strProperty
-			 * @return QGI::Element*
+			 * @return void
 			 */
-			Element* addProperty(QString strProperty)
+			void addProperty(QString strProperty)
 			{
 				// Set the property into the structure instance
 				this->mProperties.append(strProperty);
 				// Remove duplicates
 				this->mProperties.removeDuplicates();
-				// Return the structure instance
-				return this;
 			}
 	};
 
@@ -890,7 +974,17 @@ namespace QGI
 			/// Methods //////////////////////////////////////////////////////
 			/////////////////////////////////////////////////////////////////
 
-
+			/**
+			 * @paragraph This method generates an HTML tag
+			 * @brief QGI::Html::GenerateTag()
+			 * @param QString strType
+			 * @param bool bSelfClosing [false]
+			 * @param bool bValueIsAttribute [true]
+			 * @param QMap<QString QString> qmAttributes [QMap<QString, QString>()]
+			 * @param QList<Element> qlChildren [QList<Element>()]
+			 * @return
+			 */
+			QString GenerateTag(QString strType, bool bSelfClosing, bool bValueIsAttribute, QMap<QString, QString> qmAttributes, QList<QGI::Element> qlChildren);
 
 	};
 }
