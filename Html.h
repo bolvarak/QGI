@@ -767,6 +767,13 @@ namespace QGI
 			static QString TagHtml;
 
 			/**
+			 * @paragraph This constant defines the text for th img tag
+			 * @brief QGI::Html::TagImage
+			 * @var QString
+			 */
+			static QString TagImage;
+
+			/**
 			 * @paragraph This constant defines the text for the input tag
 			 * @brief QGI::Html::TagInput
 			 * @var QString
@@ -975,16 +982,164 @@ namespace QGI
 			/////////////////////////////////////////////////////////////////
 
 			/**
-			 * @paragraph This method generates an HTML tag
-			 * @brief QGI::Html::GenerateTag()
+			 * @paragraph This method generates an a tag
+			 * @brief QGI::Html::Anchor()
+			 * @param QString strHypertextReference
+			 * @param QString strValue
+			 * @param QString strIdentifier
+			 * @param QString strName
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Anchor(QString strHypertextReference, QString strValue, QString strIdentifier, QString strName, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method generates a button tag
+			 * @brief QGI::Html::Button()
+			 * @param QString strName
+			 * @param QString strLabel
+			 * @param QString strIdentifier
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Button(QString strName, QString strLabel, QString strIdentifier, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method generates a div tag
+			 * @brief QGI::Html::Divider()
+			 * @param QList<QGI::Element> qlChildren
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Divider(QList<Element> qlChildren, QMap<QString, QString> qmAttributes);
+
+
+			/**
+			 * @paragraph This method generates a select tag dropdown
+			 * @brief QGI::Html::Dropdown()
+			 * @param QString strName
+			 * @param QString strIdentifier
+			 * @param QGI::DataProvider dpOptions
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Dropdown(QString strName, QString strIdentifier, DataProvider dpOptions, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method generates a fieldset tag
+			 * @brief QGI::Html::Fieldset()
+			 * @param QList<QGI::Element> qlChildren
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Fieldset(QList<Element> qlChildren, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method generates a form tag
+			 * @brief QGI::Html::Form()
+			 * @param QString strAction
+			 * @param QString strMethod
+			 * @param QString strIdentifier
+			 * @param QList<QGI::Element> qlChildren
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Form(QString strAction, QString strMethod, QString strIdentifier, QList<Element> qlChildren, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method generates an img tag
+			 * @brief QGI::Html::Image()
+			 * @param QString strSource
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Image(QString strSource, QMap<QList, QList> qmAttributes);
+
+			/**
+			 * @paragraph This method generates a label tag
+			 * @brief QGI::Html::Label()
+			 * @param QString strText
+			 * @param QString strFor
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Label(QString strText, QString strFor, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method generates an input tag
+			 * @brief QGI::Html::Input()
 			 * @param QString strType
-			 * @param bool bSelfClosing [false]
-			 * @param bool bValueIsAttribute [true]
-			 * @param QMap<QString QString> qmAttributes [QMap<QString, QString>()]
-			 * @param QList<Element> qlChildren [QList<Element>()]
+			 * @param QString strName
+			 * @param QString strIdentifier
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Input(QString strType, QString strName, QString strIdentifier, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method generates a link tag
+			 * @brief QGI::Html::Link()
+			 * @param QString strRelativity
+			 * @param QString strType
+			 * @param QString strHypertextReference
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Link(QString strRelativity, QString strType, QString strHypertextReference, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method generates a meta tag
+			 * @brief QGI::Html::Meta()
+			 * @param QString strName
+			 * @param QString strContent
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Meta(QString strName, QString strContent, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method generates a script tag
+			 * @brief QGI::Html::Script()
+			 * @param QString strType
+			 * @param QString strSource
+			 * @param bool bScriptIsInline
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Script(QString strType, QString strSource, bool bScriptIsInline, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method genertes a style tag
+			 * @brief QGI::Html::Style()
+			 * @param QString strType
+			 * @param QString strSource
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString Style(QString strType, QString strSource, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method generates a textarea tag
+			 * @brief QGI::Html::TextArea()
+			 * @param QString strName
+			 * @param QString strIdentifier
+			 * @param QString strContent
+			 * @param QMap<QString, QString> qmAttributes
+			 * @return QString
+			 */
+			QString TextArea(QString strName, QString strIdentifier, QString strContent, QMap<QString, QString> qmAttributes);
+
+			/**
+			 * @paragraph This method generates an HTML tag
+			 * @brief QGI::Html::Tag()
+			 * @param QString strType
+			 * @param bool bSelfClosing
+			 * @param bool bValueIsAttribute
+			 * @param QMap<QString QString> qmAttributes
+			 * @param QList<Element> qlChildren
 			 * @return
 			 */
-			QString GenerateTag(QString strType, bool bSelfClosing, bool bValueIsAttribute, QMap<QString, QString> qmAttributes, QList<QGI::Element> qlChildren);
+			QString Tag(QString strType, bool bSelfClosing, bool bValueIsAttribute, QMap<QString, QString> qmAttributes, QList<Element> qlChildren);
 
 	};
 }

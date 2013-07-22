@@ -71,6 +71,7 @@ QString QGI::Html::TagHeader5                  = "h5";
 QString QGI::Html::TagHorizontalRule           = "hr";
 QString QGI::Html::TagHtml                     = "html";
 QString QGI::Html::TagItalics                  = "i";
+QString QGI::Html::TagImage                    = "img";
 QString QGI::Html::TagInput                    = "input";
 QString QGI::Html::TagLabel                    = "label";
 QString QGI::Html::TagLegend                   = "legend";
