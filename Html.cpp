@@ -129,4 +129,30 @@ QGI::Html::Html(QObject* qoParent) : QObject(qoParent){}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+QString QGI::Html::Anchor(QString strHypertextReference, QString strValue, QString strIdentifier, QString strName, QMap<QString, QString> qmAttributes)
+{
+
+}
+
+
+
+QString	QGI::Html::Button(QString strName, QString strLabel, QString strIdentifier, QMap<QString, QString> qmAttributes)
+{
+
+}
+
+
+
+QString QGI::Html::Divider(QList<Element> qlChildren, QMap<QString, QString> qmAttributes)
+{
+
+}
+
+
+QString QGI::Html::Dropdown(QString strName, QString strIdentifier, DataProvider dpOptions, QMap<QString, QString> qmAttributes)
+{
+
+}
+
+
 
